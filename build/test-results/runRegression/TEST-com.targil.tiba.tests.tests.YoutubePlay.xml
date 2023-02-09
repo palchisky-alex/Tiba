@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.targil.tiba.tests.tests.YoutubePlay" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-08T22:14:50" hostname="DESKTOP-2TPN2B7" time="14.825">
+  <properties/>
+  <testcase name="testMy" classname="com.targil.tiba.tests.tests.YoutubePlay" time="14.825"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
