@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class YoutubePlay extends TestBase {
 
-    @Test(groups = "first")
+    @Test(groups = "youtube")
     public void testMy() {
         app.getYoutubeHelper().open();
         app.getYoutubeHelper().searching();
