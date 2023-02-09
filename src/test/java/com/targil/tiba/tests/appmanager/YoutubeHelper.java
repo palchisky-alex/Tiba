@@ -19,6 +19,9 @@ public class YoutubeHelper extends HelperBase {
     @FindBy(css = "#filter-menu [aria-hidden='false']")
     WebElement filter_container;
 
+    @FindBy(css = "#description #expand")
+    WebElement btn_show_more;
+
 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     public YoutubeHelper(WebDriver driver) {
@@ -37,18 +40,15 @@ public class YoutubeHelper extends HelperBase {
         el.sendKeys(Keys.ENTER);
     }
 
-    public void sortVideoList(String filter_name) throws InterruptedException {
+    public void sortListResults(String filter_name) throws InterruptedException {
         openFilterContainer();
         sortBy(filter_name);
-
     }
 
     public void openFilterContainer() {
         click(btn_filter);
     }
-
     public void sortBy(String type) {
-
         switch (type) {
             case "Video":
                 click(sort_by_video);
@@ -56,14 +56,28 @@ public class YoutubeHelper extends HelperBase {
             case "Count":
                 click(sort_by_count);
                 break;
-            default:
-                click(sort_by_count);
         }
         wait.until(ExpectedConditions.invisibilityOf(filter_container));
+    }
+    public void getChannelNameById(String id) {
+        String t = driver.findElement(By.cssSelector("#dismissible:has(a[href*='"+id+"']) #channel-info #text")).getText();
+        System.out.println("Name of channel: " + t);
     }
 
     public void click(WebElement el) {
         wait.until(ExpectedConditions.visibilityOf(el));
         el.click();
+    }
+
+
+    public void playVideoById(String id) {
+        WebElement el = driver.findElement(By.xpath("(//*[@id='video-title'][contains(@href, '"+id+"')])[1]"));
+        click(el);
+    }
+
+    public void getVideoDescriptions() {
+        click(btn_show_more);
+        String s = driver.findElement(By.xpath("//*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]")).getText();
+        System.out.println("Descr: " + s);
     }
 }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.targil.tiba.tests.tests.YoutubePlay" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-09T14:20:51" hostname="DESKTOP-2TPN2B7" time="28.895">
+<testsuite name="com.targil.tiba.tests.tests.YoutubePlay" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-09T16:07:24" hostname="DESKTOP-2TPN2B7" time="33.277">
   <properties/>
-  <testcase name="testMy" classname="com.targil.tiba.tests.tests.YoutubePlay" time="28.895"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testMy" classname="com.targil.tiba.tests.tests.YoutubePlay" time="33.277"/>
+  <system-out><![CDATA[Name of channel: nikki7993
+Descr: Gloria Gaynor
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

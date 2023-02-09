@@ -8,8 +8,11 @@ public class YoutubePlay extends TestBase {
     public void testMy() throws InterruptedException {
         app.getYoutubeHelper().open();
         app.getYoutubeHelper().searching();
-        app.getYoutubeHelper().sortVideoList("Video");
-        app.getYoutubeHelper().sortVideoList("Count");
+        app.getYoutubeHelper().sortListResults("Video");
+        app.getYoutubeHelper().sortListResults("Count");
+        app.getYoutubeHelper().getChannelNameById("ybXrrTX3LuI");
+        app.getYoutubeHelper().playVideoById("ybXrrTX3LuI");
+        app.getYoutubeHelper().getVideoDescriptions();
         Thread.sleep(5000);
     }
 
