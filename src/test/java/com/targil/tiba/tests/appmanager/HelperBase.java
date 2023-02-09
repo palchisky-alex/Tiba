@@ -24,8 +24,11 @@ public class HelperBase {
     }
 
     public void route(String url) {
-        driver.get(url);
-        wait.until(ExpectedConditions.urlToBe(url));
+        String currentURL = driver.getCurrentUrl();
+        if(!currentURL.equals(url)) {
+            driver.get(url);
+            wait.until(ExpectedConditions.urlToBe(url));
+        }
     }
 
     public void click(WebElement el) {

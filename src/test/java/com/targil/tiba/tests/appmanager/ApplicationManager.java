@@ -24,7 +24,7 @@ public class ApplicationManager {
         youtubeHelper = new YoutubeHelper(driver);
     }
 
-    public YoutubeHelper getYoutubeHelper() {
+    public YoutubeHelper page() {
         return youtubeHelper;
     }
 

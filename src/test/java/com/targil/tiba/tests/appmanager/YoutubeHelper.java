@@ -2,7 +2,6 @@ package com.targil.tiba.tests.appmanager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -69,28 +68,31 @@ public class YoutubeHelper extends HelperBase {
         wait.until(ExpectedConditions.invisibilityOf(filter_container));
         log.info("Exit method");
     }
-    public void getChannelNameById(String id) {
+    public String getChannelNameById(String id) {
         log.info("Entering method: " + getMethodName() + "-" +id);
         String channel = "#dismissible:has(a[href*='"+id+"']) #channel-info #text";
         WebElement channelElement = driver.findElement(By.cssSelector(channel));
         String text = getText(channelElement);
         log.info("Channel name = " + text);
         log.info("Exit method");
+        return text;
     }
 
-    public void playVideoById(String id) {
+    public boolean playVideoById(String id) {
         log.info("Entering method: " + getMethodName());
         String btn = "(//*[@id='video-title'][contains(@href, '"+id+"')])[1]";
         WebElement btn_play_video = driver.findElement(By.xpath(btn));
         click(btn_play_video);
         log.info("Exit method");
+        return driver.getCurrentUrl().contains("id");
     }
 
-    public void getVideoDescriptions() {
+    public String getVideoDescriptions() {
         log.info("Entering method: " + getMethodName());
         click(btn_show_more);
         String artist_name = getText(artist_descr);
         log.info("Artist Name: " + artist_name);
         log.info("Exit method");
+        return artist_name;
     }
 }
