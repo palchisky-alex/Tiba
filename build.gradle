@@ -28,7 +28,7 @@ dependencies {
 task runRegression(type: Test) {
     useTestNG() {
         testLogging.showStandardStreams = true
-        includeGroups System.getProperty('group', 'first')
+        includeGroups System.getProperty('group', 'youtube')
 
     }
 }

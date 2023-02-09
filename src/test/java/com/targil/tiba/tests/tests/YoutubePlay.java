@@ -5,10 +5,12 @@ import org.testng.annotations.Test;
 public class YoutubePlay extends TestBase {
 
     @Test(groups = "youtube")
-    public void testMy() {
+    public void testMy() throws InterruptedException {
         app.getYoutubeHelper().open();
         app.getYoutubeHelper().searching();
-        app.getYoutubeHelper().select_filter();
+        app.getYoutubeHelper().sortVideoList("Video");
+        app.getYoutubeHelper().sortVideoList("Count");
+        Thread.sleep(5000);
     }
 
 }

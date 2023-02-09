@@ -1,6 +1,7 @@
 package com.targil.tiba.tests.appmanager;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class HelperBase {
 
@@ -8,5 +9,6 @@ public class HelperBase {
 
     public HelperBase(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 }
