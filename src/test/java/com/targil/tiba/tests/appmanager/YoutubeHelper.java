@@ -1,54 +1,63 @@
 package com.targil.tiba.tests.appmanager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
 public class YoutubeHelper extends HelperBase {
-
+    protected static final Logger log = LogManager.getLogger();
     @FindBy(css = "[title='Search for Video'] > :first-child")
     WebElement sort_by_video;
     @FindBy(css = "[title='Sort by view count'] > :first-child")
     WebElement sort_by_count;
+    @FindBy(css = "input#search")
+    WebElement input_search_video;
     @FindBy(css = "#filter-menu  button")
     WebElement btn_filter;
     @FindBy(css = "#filter-menu [aria-hidden='false']")
     WebElement filter_container;
-
+    @FindBy(xpath = "//*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]")
+    WebElement artist_descr;
     @FindBy(css = "#description #expand")
     WebElement btn_show_more;
 
 
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     public YoutubeHelper(WebDriver driver) {
         super(driver);
     }
 
 
-    public void open() {
-        driver.get("https://www.youtube.com");
+    public void goToURL(String url) {
+        log.info("Entering method: " + getMethodName());
+        route(url);
+        log.info("Exit method");
     }
 
-    public void searching() {
-        WebElement el = driver.findElement(By.cssSelector("input#search"));
-        el.click();
-        el.sendKeys("I Will Survive - Alien song");
-        el.sendKeys(Keys.ENTER);
+    public void searchForVideo(String songName) {
+        log.info("Entering method: " + getMethodName());
+        type(input_search_video, songName);
+        submit(input_search_video);
+        log.info("Exit method");
     }
 
-    public void sortListResults(String filter_name) throws InterruptedException {
+    public void sortListResults(String filter_name) {
+        log.info("Entering method: " + getMethodName());
         openFilterContainer();
         sortBy(filter_name);
+        log.info("Exit method");
     }
 
     public void openFilterContainer() {
+        log.info("Entering method: " + getMethodName());
         click(btn_filter);
+        log.info("Exit method");
     }
     public void sortBy(String type) {
+        log.info("Entering method: " + getMethodName() + "-" +type);
         switch (type) {
             case "Video":
                 click(sort_by_video);
@@ -58,26 +67,30 @@ public class YoutubeHelper extends HelperBase {
                 break;
         }
         wait.until(ExpectedConditions.invisibilityOf(filter_container));
+        log.info("Exit method");
     }
     public void getChannelNameById(String id) {
-        String t = driver.findElement(By.cssSelector("#dismissible:has(a[href*='"+id+"']) #channel-info #text")).getText();
-        System.out.println("Name of channel: " + t);
+        log.info("Entering method: " + getMethodName() + "-" +id);
+        String channel = "#dismissible:has(a[href*='"+id+"']) #channel-info #text";
+        WebElement channelElement = driver.findElement(By.cssSelector(channel));
+        String text = getText(channelElement);
+        log.info("Channel name = " + text);
+        log.info("Exit method");
     }
-
-    public void click(WebElement el) {
-        wait.until(ExpectedConditions.visibilityOf(el));
-        el.click();
-    }
-
 
     public void playVideoById(String id) {
-        WebElement el = driver.findElement(By.xpath("(//*[@id='video-title'][contains(@href, '"+id+"')])[1]"));
-        click(el);
+        log.info("Entering method: " + getMethodName());
+        String btn = "(//*[@id='video-title'][contains(@href, '"+id+"')])[1]";
+        WebElement btn_play_video = driver.findElement(By.xpath(btn));
+        click(btn_play_video);
+        log.info("Exit method");
     }
 
     public void getVideoDescriptions() {
+        log.info("Entering method: " + getMethodName());
         click(btn_show_more);
-        String s = driver.findElement(By.xpath("//*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]")).getText();
-        System.out.println("Descr: " + s);
+        String artist_name = getText(artist_descr);
+        log.info("Artist Name: " + artist_name);
+        log.info("Exit method");
     }
 }

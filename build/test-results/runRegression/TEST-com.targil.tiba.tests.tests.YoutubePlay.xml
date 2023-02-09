@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.targil.tiba.tests.tests.YoutubePlay" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-09T16:07:24" hostname="DESKTOP-2TPN2B7" time="33.277">
+<testsuite name="com.targil.tiba.tests.tests.YoutubePlay" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-09T20:43:01" hostname="DESKTOP-2TPN2B7" time="28.326">
   <properties/>
-  <testcase name="testMy" classname="com.targil.tiba.tests.tests.YoutubePlay" time="33.277"/>
-  <system-out><![CDATA[Name of channel: nikki7993
-Descr: Gloria Gaynor
+  <testcase name="testMy" classname="com.targil.tiba.tests.tests.YoutubePlay" time="28.326"/>
+  <system-out><![CDATA[22:43:01.746 [Test worker] - Entering method: goToURL
+22:43:09.431 [Test worker] - Exit method
+22:43:09.432 [Test worker] - Entering method: searchForVideo
+22:43:09.787 [Test worker] - send text: I Will Survive - Alien song to [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: input#search]
+22:43:11.118 [Test worker] - submit [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: input#search]
+22:43:11.299 [Test worker] - Exit method
+22:43:11.300 [Test worker] - Entering method: sortListResults
+22:43:11.300 [Test worker] - Entering method: openFilterContainer
+22:43:13.297 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: #filter-menu  button]
+22:43:13.677 [Test worker] - Exit method
+22:43:13.677 [Test worker] - Entering method: sortBy-Video
+22:43:14.186 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: [title='Search for Video'] > :first-child]
+22:43:20.259 [Test worker] - Exit method
+22:43:20.260 [Test worker] - Exit method
+22:43:20.260 [Test worker] - Entering method: sortListResults
+22:43:20.261 [Test worker] - Entering method: openFilterContainer
+22:43:20.328 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: #filter-menu  button]
+22:43:20.455 [Test worker] - Exit method
+22:43:20.456 [Test worker] - Entering method: sortBy-Count
+22:43:20.567 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: [title='Sort by view count'] > :first-child]
+22:43:26.476 [Test worker] - Exit method
+22:43:26.477 [Test worker] - Exit method
+22:43:26.478 [Test worker] - Entering method: getChannelNameById-ybXrrTX3LuI
+22:43:26.527 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: #dismissible:has(a[href*='ybXrrTX3LuI']) #channel-info #text]
+22:43:26.551 [Test worker] - Channel name = nikki7993
+22:43:26.551 [Test worker] - Exit method
+22:43:26.551 [Test worker] - Entering method: playVideoById
+22:43:26.612 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> xpath: (//*[@id='video-title'][contains(@href, 'ybXrrTX3LuI')])[1]]
+22:43:26.840 [Test worker] - Exit method
+22:43:26.841 [Test worker] - Entering method: getVideoDescriptions
+22:43:29.351 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> css selector: #description #expand]
+22:43:29.957 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (58a8005b95005d47ae3d4662d2603bac)] -> xpath: //*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]]
+22:43:30.064 [Test worker] - Artist Name: Gloria Gaynor
+22:43:30.065 [Test worker] - Exit method
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
