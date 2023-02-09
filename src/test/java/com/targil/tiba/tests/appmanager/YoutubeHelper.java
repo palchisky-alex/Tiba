@@ -13,6 +13,8 @@ public class YoutubeHelper extends HelperBase {
     WebElement sort_by_video;
     @FindBy(css = "[title='Sort by view count'] > :first-child")
     WebElement sort_by_count;
+    @FindBy(css = "[title='Sort by relevance'] > :first-child")
+    WebElement sort_by_relevance;
     @FindBy(css = "input#search")
     WebElement input_search_video;
     @FindBy(css = "#filter-menu  button")
@@ -43,10 +45,10 @@ public class YoutubeHelper extends HelperBase {
         log.info("Exit method");
     }
 
-    public void sortListResults(String filter_name) {
+    public void sortListResultsBy(String filter) {
         log.info("Entering method: " + getMethodName());
         openFilterContainer();
-        sortBy(filter_name);
+        sortBy(filter);
         log.info("Exit method");
     }
 
@@ -63,6 +65,9 @@ public class YoutubeHelper extends HelperBase {
                 break;
             case "Count":
                 click(sort_by_count);
+                break;
+            case "Relevance":
+                click(sort_by_relevance);
                 break;
         }
         wait.until(ExpectedConditions.invisibilityOf(filter_container));

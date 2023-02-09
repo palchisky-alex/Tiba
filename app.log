@@ -1,34 +1,84 @@
-2023-02-09 23:08:11.661 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: goToURL
-2023-02-09 23:08:20.285 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:20.286 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: searchForVideo
-2023-02-09 23:08:22.254 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - send text: I Will Survive - Alien song to [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: input#search]
-2023-02-09 23:08:24.053 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - submit [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: input#search]
-2023-02-09 23:08:24.221 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:24.222 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
-2023-02-09 23:08:24.222 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
-2023-02-09 23:08:26.565 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #filter-menu  button]
-2023-02-09 23:08:26.957 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:26.957 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Video
-2023-02-09 23:08:27.442 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: [title='Search for Video'] > :first-child]
-2023-02-09 23:08:33.713 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:33.713 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:33.713 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
-2023-02-09 23:08:33.714 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
-2023-02-09 23:08:33.792 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #filter-menu  button]
-2023-02-09 23:08:33.950 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:33.952 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Count
-2023-02-09 23:08:34.327 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: [title='Sort by view count'] > :first-child]
-2023-02-09 23:08:40.087 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:40.087 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:40.088 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: getChannelNameById-ybXrrTX3LuI
-2023-02-09 23:08:40.139 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - get text from [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #dismissible:has(a[href*='ybXrrTX3LuI']) #channel-info #text]
-2023-02-09 23:08:40.166 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Channel name = nikki7993
-2023-02-09 23:08:40.166 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:40.167 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: playVideoById
-2023-02-09 23:08:40.240 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> xpath: (//*[@id='video-title'][contains(@href, 'ybXrrTX3LuI')])[1]]
-2023-02-09 23:08:40.476 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
-2023-02-09 23:08:40.527 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: getVideoDescriptions
-2023-02-09 23:08:43.436 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #description #expand]
-2023-02-09 23:08:43.964 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - get text from [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> xpath: //*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]]
-2023-02-09 23:08:44.067 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Artist Name: Gloria Gaynor
-2023-02-09 23:08:44.067 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:33.919 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: goToURL
+2023-02-10 00:18:40.137 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:40.139 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: searchForVideo
+2023-02-10 00:18:41.284 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - send text: I Will Survive - Alien song to [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+2023-02-10 00:18:42.799 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - submit [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+2023-02-10 00:18:43.046 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:43.046 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
+2023-02-10 00:18:43.047 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
+2023-02-10 00:18:45.658 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+2023-02-10 00:18:46.246 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:46.246 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Video
+2023-02-10 00:18:46.820 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Search for Video'] > :first-child]
+2023-02-10 00:18:51.170 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:51.170 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:51.170 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
+2023-02-10 00:18:51.171 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
+2023-02-10 00:18:51.242 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+2023-02-10 00:18:51.344 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:51.344 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Count
+2023-02-10 00:18:51.694 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by view count'] > :first-child]
+2023-02-10 00:18:55.466 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:55.466 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:55.468 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
+2023-02-10 00:18:55.469 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
+2023-02-10 00:18:55.564 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+2023-02-10 00:18:55.684 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:55.685 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Relevance
+2023-02-10 00:18:55.976 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by relevance'] > :first-child]
+2023-02-10 00:18:59.729 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:59.730 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:18:59.731 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: getChannelNameById-ybXrrTX3LuI
+2023-02-10 00:18:59.787 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #dismissible:has(a[href*='ybXrrTX3LuI']) #channel-info #text]
+2023-02-10 00:18:59.808 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Channel name = nikki7993
+2023-02-10 00:18:59.808 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:00.743 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: playVideoById
+2023-02-10 00:19:00.848 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: (//*[@id='video-title'][contains(@href, 'ybXrrTX3LuI')])[1]]
+2023-02-10 00:19:01.034 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:01.425 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: getVideoDescriptions
+2023-02-10 00:19:04.610 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #description #expand]
+2023-02-10 00:19:05.341 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: //*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]]
+2023-02-10 00:19:05.440 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Artist Name: Gloria Gaynor
+2023-02-10 00:19:05.440 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:05.444 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: goToURL
+2023-02-10 00:19:07.566 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:07.567 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: searchForVideo
+2023-02-10 00:19:09.526 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - send text: W h i t n e y H o u s t o n Greatest Hits ~ Best Songs Of 80s Old Music Hits Collection to [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+2023-02-10 00:19:10.541 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - submit [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+2023-02-10 00:19:10.675 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:10.676 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
+2023-02-10 00:19:10.676 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
+2023-02-10 00:19:12.361 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+2023-02-10 00:19:12.867 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:12.869 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Video
+2023-02-10 00:19:13.230 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Search for Video'] > :first-child]
+2023-02-10 00:19:17.495 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:17.496 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:17.496 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
+2023-02-10 00:19:17.497 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
+2023-02-10 00:19:17.554 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+2023-02-10 00:19:17.619 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:17.620 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Count
+2023-02-10 00:19:17.951 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by view count'] > :first-child]
+2023-02-10 00:19:22.421 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:22.422 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:22.424 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortListResults
+2023-02-10 00:19:22.425 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: openFilterContainer
+2023-02-10 00:19:22.502 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+2023-02-10 00:19:22.575 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:22.576 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: sortBy-Relevance
+2023-02-10 00:19:22.858 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by relevance'] > :first-child]
+2023-02-10 00:19:26.740 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:26.740 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:26.742 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: getChannelNameById-NM3tVWpiZ7Y
+2023-02-10 00:19:26.792 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #dismissible:has(a[href*='NM3tVWpiZ7Y']) #channel-info #text]
+2023-02-10 00:19:26.811 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Channel name = Chansons Françaises
+2023-02-10 00:19:26.811 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:26.811 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: playVideoById
+2023-02-10 00:19:26.870 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: (//*[@id='video-title'][contains(@href, 'NM3tVWpiZ7Y')])[1]]
+2023-02-10 00:19:26.976 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method
+2023-02-10 00:19:26.990 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Entering method: getVideoDescriptions
+2023-02-10 00:19:29.626 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #description #expand]
+2023-02-10 00:19:30.262 [Test worker] com.targil.tiba.tests.appmanager.HelperBase - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: //*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]]
+2023-02-10 00:19:30.308 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Artist Name: Whitney Houston
+2023-02-10 00:19:30.308 [Test worker] com.targil.tiba.tests.appmanager.YoutubeHelper - Exit method

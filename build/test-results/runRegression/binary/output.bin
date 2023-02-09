@@ -1,35 +1,84 @@
-723:08:11.661 [Test worker] - Entering method: goToURL
-*23:08:20.285 [Test worker] - Exit method
->23:08:20.286 [Test worker] - Entering method: searchForVideo
-­23:08:22.254 [Test worker] - send text: I Will Survive - Alien song to [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: input#search]
-Š23:08:24.053 [Test worker] - submit [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: input#search]
-*23:08:24.221 [Test worker] - Exit method
-?23:08:24.222 [Test worker] - Entering method: sortListResults
-C23:08:24.222 [Test worker] - Entering method: openFilterContainer
-”23:08:26.565 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #filter-menu  button]
-*23:08:26.957 [Test worker] - Exit method
-<23:08:26.957 [Test worker] - Entering method: sortBy-Video
-©23:08:27.442 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: [title='Search for Video'] > :first-child]
-*23:08:33.713 [Test worker] - Exit method
-*23:08:33.713 [Test worker] - Exit method
-?23:08:33.713 [Test worker] - Entering method: sortListResults
-C23:08:33.714 [Test worker] - Entering method: openFilterContainer
-”23:08:33.792 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #filter-menu  button]
-*23:08:33.950 [Test worker] - Exit method
-<23:08:33.952 [Test worker] - Entering method: sortBy-Count
-«23:08:34.327 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: [title='Sort by view count'] > :first-child]
-*23:08:40.087 [Test worker] - Exit method
-*23:08:40.087 [Test worker] - Exit method
-N23:08:40.088 [Test worker] - Entering method: getChannelNameById-ybXrrTX3LuI
-Á23:08:40.139 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #dismissible:has(a[href*='ybXrrTX3LuI']) #channel-info #text]
-723:08:40.166 [Test worker] - Channel name = nikki7993
-*23:08:40.166 [Test worker] - Exit method
-=23:08:40.167 [Test worker] - Entering method: playVideoById
-´23:08:40.240 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> xpath: (//*[@id='video-title'][contains(@href, 'ybXrrTX3LuI')])[1]]
-*23:08:40.476 [Test worker] - Exit method
-URL - - false
-D23:08:40.527 [Test worker] - Entering method: getVideoDescriptions
-”23:08:43.436 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> css selector: #description #expand]
-»23:08:43.964 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (872bdfe7f99e526b5f4c54725243503b)] -> xpath: //*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]]
-923:08:44.067 [Test worker] - Artist Name: Gloria Gaynor
-*23:08:44.067 [Test worker] - Exit method
+700:18:33.919 [Test worker] - Entering method: goToURL
+*00:18:40.137 [Test worker] - Exit method
+>00:18:40.139 [Test worker] - Entering method: searchForVideo
+­00:18:41.284 [Test worker] - send text: I Will Survive - Alien song to [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+Š00:18:42.799 [Test worker] - submit [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+*00:18:43.046 [Test worker] - Exit method
+?00:18:43.046 [Test worker] - Entering method: sortListResults
+C00:18:43.047 [Test worker] - Entering method: openFilterContainer
+”00:18:45.658 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+*00:18:46.246 [Test worker] - Exit method
+<00:18:46.246 [Test worker] - Entering method: sortBy-Video
+©00:18:46.820 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Search for Video'] > :first-child]
+*00:18:51.170 [Test worker] - Exit method
+*00:18:51.170 [Test worker] - Exit method
+?00:18:51.170 [Test worker] - Entering method: sortListResults
+C00:18:51.171 [Test worker] - Entering method: openFilterContainer
+”00:18:51.242 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+*00:18:51.344 [Test worker] - Exit method
+<00:18:51.344 [Test worker] - Entering method: sortBy-Count
+«00:18:51.694 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by view count'] > :first-child]
+*00:18:55.466 [Test worker] - Exit method
+*00:18:55.466 [Test worker] - Exit method
+?00:18:55.468 [Test worker] - Entering method: sortListResults
+C00:18:55.469 [Test worker] - Entering method: openFilterContainer
+”00:18:55.564 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+*00:18:55.684 [Test worker] - Exit method
+@00:18:55.685 [Test worker] - Entering method: sortBy-Relevance
+ª00:18:55.976 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by relevance'] > :first-child]
+*00:18:59.729 [Test worker] - Exit method
+*00:18:59.730 [Test worker] - Exit method
+N00:18:59.731 [Test worker] - Entering method: getChannelNameById-ybXrrTX3LuI
+Á00:18:59.787 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #dismissible:has(a[href*='ybXrrTX3LuI']) #channel-info #text]
+700:18:59.808 [Test worker] - Channel name = nikki7993
+*00:18:59.808 [Test worker] - Exit method
+=00:19:00.743 [Test worker] - Entering method: playVideoById
+´00:19:00.848 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: (//*[@id='video-title'][contains(@href, 'ybXrrTX3LuI')])[1]]
+*00:19:01.034 [Test worker] - Exit method
+D00:19:01.425 [Test worker] - Entering method: getVideoDescriptions
+”00:19:04.610 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #description #expand]
+»00:19:05.341 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: //*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]]
+900:19:05.440 [Test worker] - Artist Name: Gloria Gaynor
+*00:19:05.440 [Test worker] - Exit method
+700:19:05.444 [Test worker] - Entering method: goToURL
+*00:19:07.566 [Test worker] - Exit method
+>00:19:07.567 [Test worker] - Entering method: searchForVideo
+é00:19:09.526 [Test worker] - send text: W h i t n e y H o u s t o n Greatest Hits ~ Best Songs Of 80s Old Music Hits Collection to [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+Š00:19:10.541 [Test worker] - submit [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: input#search]
+*00:19:10.675 [Test worker] - Exit method
+?00:19:10.676 [Test worker] - Entering method: sortListResults
+C00:19:10.676 [Test worker] - Entering method: openFilterContainer
+”00:19:12.361 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+*00:19:12.867 [Test worker] - Exit method
+<00:19:12.869 [Test worker] - Entering method: sortBy-Video
+©00:19:13.230 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Search for Video'] > :first-child]
+*00:19:17.495 [Test worker] - Exit method
+*00:19:17.496 [Test worker] - Exit method
+?00:19:17.496 [Test worker] - Entering method: sortListResults
+C00:19:17.497 [Test worker] - Entering method: openFilterContainer
+”00:19:17.554 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+*00:19:17.619 [Test worker] - Exit method
+<00:19:17.620 [Test worker] - Entering method: sortBy-Count
+«00:19:17.951 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by view count'] > :first-child]
+*00:19:22.421 [Test worker] - Exit method
+*00:19:22.422 [Test worker] - Exit method
+?00:19:22.424 [Test worker] - Entering method: sortListResults
+C00:19:22.425 [Test worker] - Entering method: openFilterContainer
+”00:19:22.502 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #filter-menu  button]
+*00:19:22.575 [Test worker] - Exit method
+@00:19:22.576 [Test worker] - Entering method: sortBy-Relevance
+ª00:19:22.858 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: [title='Sort by relevance'] > :first-child]
+*00:19:26.740 [Test worker] - Exit method
+*00:19:26.740 [Test worker] - Exit method
+N00:19:26.742 [Test worker] - Entering method: getChannelNameById-NM3tVWpiZ7Y
+Á00:19:26.792 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #dismissible:has(a[href*='NM3tVWpiZ7Y']) #channel-info #text]
+B00:19:26.811 [Test worker] - Channel name = Chansons FranÃ§aises
+*00:19:26.811 [Test worker] - Exit method
+=00:19:26.811 [Test worker] - Entering method: playVideoById
+´00:19:26.870 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: (//*[@id='video-title'][contains(@href, 'NM3tVWpiZ7Y')])[1]]
+*00:19:26.976 [Test worker] - Exit method
+D00:19:26.990 [Test worker] - Entering method: getVideoDescriptions
+”00:19:29.626 [Test worker] - click on [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> css selector: #description #expand]
+»00:19:30.262 [Test worker] - get text from [[ChromeDriver: chrome on WINDOWS (35519f6e8ee819fd61e77ca5bea38c24)] -> xpath: //*[@id='description-inner']//*[text()='ARTIST']/..//*[@href]]
+;00:19:30.308 [Test worker] - Artist Name: Whitney Houston
+*00:19:30.308 [Test worker] - Exit method
