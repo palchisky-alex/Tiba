@@ -19,14 +19,24 @@ public class ApplicationManager {
     }
 
     public void init() {
-        String current_os = config.OS();
-        if(current_os.equals("MAC")) {
-            driver = WebDriverManager.safaridriver().create();
-        } else if (current_os.equals("PC")) {
-            driver = WebDriverManager.chromedriver().create();
+        String browser_config = config.browser();
+        switch(browser_config) {
+            case "Chrome":
+                driver = WebDriverManager.chromedriver().create();
+                break;
+            case "Firefox":
+                driver = WebDriverManager.firefoxdriver().create();
+                break;
+            case "Edge":
+                driver = WebDriverManager.edgedriver().create();
+                break;
+            case "Opera":
+                driver = WebDriverManager.operadriver().create();
+                break;
         }
+
         Optional<Path> browserPath = WebDriverManager.chromedriver().getBrowserPath();
-        assumeThat(browserPath).as("browser is installed in the system").isPresent();
+        assumeThat(browserPath).as("browser installed").isPresent();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
