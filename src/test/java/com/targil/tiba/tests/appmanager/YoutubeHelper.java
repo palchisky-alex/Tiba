@@ -1,4 +1,5 @@
 package com.targil.tiba.tests.appmanager;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -25,7 +26,6 @@ public class YoutubeHelper extends HelperBase {
     WebElement artist_descr;
     @FindBy(css = "#description #expand")
     WebElement btn_show_more;
-
 
     public YoutubeHelper(WebDriver driver) {
         super(driver);
