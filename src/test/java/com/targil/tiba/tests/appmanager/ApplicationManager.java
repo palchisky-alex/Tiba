@@ -38,7 +38,7 @@ public class ApplicationManager {
         Optional<Path> browserPath = WebDriverManager.chromedriver().getBrowserPath();
         assumeThat(browserPath).as("browser installed").isPresent();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         youtubeHelper = new YoutubeHelper(driver);

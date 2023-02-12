@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class YoutubePlay extends TestBase {
     SoftAssertions soft = new SoftAssertions();
     @Test(dataProvider = "getMyDataFromExcel", groups = "youtube")
-    public void testTiba(String song, String song_id, String channel, String artist) {
+    public void testTiba(String song, String song_id, String channel, String artist) throws InterruptedException {
         app.page().goToURL("https://www.youtube.com/");
         app.page().searchForVideo(song);
         app.page().sortListResultsBy("Video");
@@ -22,7 +22,7 @@ public class YoutubePlay extends TestBase {
         soft.assertThat(play).as("Video is playing").isTrue();
 
         String artistName = app.page().getVideoDescriptions();
-        soft.assertThat(artistName).as("Artist name").isEqualTo(artist);
+        soft.assertThat(artistName).as("Artist name is present").isEqualTo(artist);
     }
 
 

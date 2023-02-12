@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class YoutubeHelper extends HelperBase {
     protected static final Logger log = LogManager.getLogger();
@@ -26,6 +25,15 @@ public class YoutubeHelper extends HelperBase {
     WebElement artist_descr;
     @FindBy(css = "#description #expand")
     WebElement btn_show_more;
+
+    @FindBy(css = "#main button")
+    WebElement btn_close_popup;
+    @FindBy(css = "[class*='skip'] [id*='ad-text']")
+    WebElement ads_with_skip;
+    @FindBy(css = "#movie_player [id*='preskip']")
+    WebElement ads_without_skip;
+    @FindBy(css = "#movie_player [id*='skip'] button")
+    WebElement btn_skip_ads;
 
     public YoutubeHelper(WebDriver driver) {
         super(driver);
@@ -52,13 +60,14 @@ public class YoutubeHelper extends HelperBase {
         log.info("Exit method");
     }
 
-    public void openFilterContainer() {
+    private void openFilterContainer() {
         log.info("Entering method: " + getMethodName());
         click(btn_filter);
         log.info("Exit method");
     }
+
     public void sortBy(String type) {
-        log.info("Entering method: " + getMethodName() + "-" +type);
+        log.info("Entering method: " + getMethodName() + "-" + type);
         switch (type) {
             case "Video":
                 click(sort_by_video);
@@ -70,12 +79,13 @@ public class YoutubeHelper extends HelperBase {
                 click(sort_by_relevance);
                 break;
         }
-        wait.until(ExpectedConditions.invisibilityOf(filter_container));
+        waitUntil("invisibilityOf", filter_container, 3, "");
         log.info("Exit method");
     }
+
     public String getChannelNameById(String id) {
-        log.info("Entering method: " + getMethodName() + "-" +id);
-        String channel = "#dismissible:has(a[href*='"+id+"']) #channel-info #text";
+        log.info("Entering method: " + getMethodName() + "-" + id);
+        String channel = "#dismissible:has(a[href*='" + id + "']) #channel-info #text";
         WebElement channelElement = driver.findElement(By.cssSelector(channel));
         String text = getText(channelElement);
         log.info("Channel name = " + text);
@@ -83,21 +93,53 @@ public class YoutubeHelper extends HelperBase {
         return text;
     }
 
-    public boolean playVideoById(String id) {
+    public boolean playVideoById(String id) throws InterruptedException {
         log.info("Entering method: " + getMethodName());
-        String btn = "(//*[@id='video-title'][contains(@href, '"+id+"')])[1]";
+        String btn = "(//*[@id='video-title'][contains(@href, '" + id + "')])[1]";
         WebElement btn_play_video = driver.findElement(By.xpath(btn));
         click(btn_play_video);
+        skipAds();
         log.info("Exit method");
         return driver.getCurrentUrl().contains("id");
     }
 
     public String getVideoDescriptions() {
         log.info("Entering method: " + getMethodName());
+        closePopup();
         click(btn_show_more);
         String artist_name = getText(artist_descr);
         log.info("Artist Name: " + artist_name);
         log.info("Exit method");
         return artist_name;
+    }
+
+    private void closePopup() {
+        log.info("Close popup");
+        try {
+            waitUntil("visibilityOf", btn_close_popup, 3, "");
+            click(btn_close_popup);
+        } catch (Exception e) {
+            log.info("No popup present");
+        }
+    }
+
+    private void skipAds() throws InterruptedException {
+        log.info("Verify ads");
+        try {
+            waitUntil("visibilityOf", ads_with_skip, 5, "");
+            waitUntil("invisibilityOf", ads_with_skip, 5, "");
+            click(btn_skip_ads);
+        } catch (Exception e) {
+            log.info("ads with skip not present");
+        }
+
+        try {
+            waitUntil("visibilityOf", ads_without_skip, 5, "");
+            waitUntil("invisibilityOf", ads_without_skip, 10, "");
+        } catch (Exception e) {
+            log.info("ads without skip not present");
+        }
+
+        Thread.sleep(3);
     }
 }
