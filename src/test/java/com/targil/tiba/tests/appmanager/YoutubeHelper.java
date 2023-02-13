@@ -125,19 +125,23 @@ public class YoutubeHelper extends HelperBase {
 
     private void skipAds() throws InterruptedException {
         log.info("Verify ads");
-        try {
-            waitUntil("visibilityOf", ads_with_skip, 5, "");
-            waitUntil("invisibilityOf", ads_with_skip, 5, "");
-            click(btn_skip_ads);
-        } catch (Exception e) {
-            log.info("ads with skip not present");
-        }
+        boolean with_skip = false;
+            try {
+                waitUntil("visibilityOf", ads_with_skip, 5, "");
+                waitUntil("invisibilityOf", ads_with_skip, 5, "");
+                click(btn_skip_ads);
+                with_skip = true;
+            } catch (Exception e) {
+                log.info("ads with skip not present");
+            }
 
-        try {
-            waitUntil("visibilityOf", ads_without_skip, 5, "");
-            waitUntil("invisibilityOf", ads_without_skip, 10, "");
-        } catch (Exception e) {
-            log.info("ads without skip not present");
+        if (!with_skip) {
+            try {
+                waitUntil("visibilityOf", ads_without_skip, 5, "");
+                waitUntil("invisibilityOf", ads_without_skip, 10, "");
+            } catch (Exception e) {
+                log.info("ads without skip not present");
+            }
         }
 
         Thread.sleep(3);
